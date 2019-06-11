@@ -9,11 +9,12 @@ $(function() {
     console.log(newArrays);
     arrays = [];
     console.log(arrays);
-    newArrays.forEach(function(newArray){
-      if(newArray.length>=3){
-        arrays.push(newArray);
-      }
-    });
+    arrays = newArrays.filter(array=>array.length>=5);
+    // newArrays.forEach(function(newArray){
+    //   if(newArray.length>=3){
+    //     arrays.push(newArray);
+    //   }
+    // });
     arrays.reverse();
     var newString = arrays.join(" ");
       $("#new_sentence").text(newString);
